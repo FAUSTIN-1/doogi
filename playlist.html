@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Video Playlist</title>
+
+   <!-- Font Awesome CDN Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS File Link -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      /* Modal Styles */
+      .modal {
+         display: none; /* Hidden by default */
+         position: fixed;
+         z-index: 1000; /* Sit on top */
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         overflow: auto; /* Enable scroll if needed */
+         background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+      }
+
+      .modal-content {
+         margin: 10% auto; /* 10% from the top and centered */
+         padding: 20px;
+         background: #fff;
+         width: 80%; /* Could be more or less, depending on screen size */
+         position: relative;
+         text-align: center;
+      }
+
+      .close {
+         position: absolute;
+         right: 20px;
+         top: 20px;
+         color: #aaa;
+         font-size: 28px;
+         font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      /* Responsive Modal */
+      @media (max-width: 768px) {
+         .modal-content {
+            width: 95%; /* Adjust modal width for smaller screens */
+         }
+      }
+   </style>
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Give and Get</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+   </section>
+</header>
+
+<section class="playlist-videos">
+   <h1 class="heading">Playlist Videos</h1>
+   <div class="box-container">
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/IngKIlvpg3s?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="Statistical.png" alt="">
+         <h3>What is Statistics (part 01)</h3>
+      </div>
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/mucUkmGTo5o?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="Data.png" alt="">
+         <h3>Data and Variables (part 02)</h3>
+      </div>
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/2YtYsaKelmY?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="Distribution.jpeg" alt="">
+         <h3>Frequency (part 03)</h3>
+      </div>
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/JVaKq-oJnFs?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="Representation.png" alt="">
+         <h3>Graphica Representation (part 04)</h3>
+      </div>
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/dAwRlYhEWOs?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="Dispersion.png" alt="">
+         <h3>Measures of Dispersion (part 05)</h3>
+      </div>
+
+      <div class="box" onclick="playVideo('https://www.youtube.com/embed/BSLqzyy9sgE?autoplay=1')">
+         <i class="fas fa-play"></i>
+         <img src="index.png" alt="">
+         <h3>Index number (part 06)</h3>
+      </div>
+
+   </div>
+</section>
+
+<!-- Video Modal -->
+<div id="videoModal" class="modal">
+   <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="video-player" width="800" height="450" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+   </div>
+</div>
+
+<footer class="footer">
+   &copy; copyright @ 2022 by <span>Give and Get</span> | all rights reserved!
+</footer>
+
+<!-- JavaScript for Modal Video Play -->
+<script>
+   function playVideo(url) {
+      // Get the modal and iframe elements
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('video-player');
+
+      // Set the video source URL and display the modal
+      player.src = url;
+      modal.style.display = "block";
+   }
+
+   function closeModal() {
+      // Get the modal and iframe elements
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('video-player');
+
+      // Hide the modal and stop the video
+      modal.style.display = "none";
+      player.src = "";  // Clear the video URL to stop playback
+   }
+</script>
+
+</body>
+</html>

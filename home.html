@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Give and Get | Home</title>
+
+   <!-- Font Awesome CDN Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- Custom CSS File Link -->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Give and Get</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search statistical topics..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/default-profile.png" class="image" alt="">
+         <h3 class="name">Jane Doe</h3>
+         <p class="role">Statistics Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>   
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/default-profile.png" class="image" alt="">
+      <h3 class="name">Jane Doe</h3>
+      <p class="role">Statistics Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+   </nav>
+</div>
+
+<section class="home-grid">
+   <h1 class="heading">Quick Options</h1>
+
+   <div class="box-container">
+      <div class="box">
+         <h3 class="title">Statistics Overview</h3>
+         <p class="likes">Total Courses: <span>8</span></p>
+         <a href="courses.html" class="inline-btn">View All Courses</a>
+         <p class="likes">Enrolled Students: <span>120</span></p>
+         <a href="#" class="inline-btn">View Students</a>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Course Categories</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-chart-bar"></i><span>Data Analysis</span></a>
+            <a href="#"><i class="fas fa-chart-line"></i><span>Linear Relationships</span></a>
+            <a href="#"><i class="fas fa-chart-pie"></i><span>Graphical Data Representation</span></a>
+            <a href="#"><i class="fas fa-calculator"></i><span>Index Numbers</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Popular Topics</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-list"></i><span>Data and Variables</span></a>
+            <a href="#"><i class="fas fa-percent"></i><span>Measures of Dispersion</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Frequency Distributions</span></a>
+            <a href="#"><i class="fas fa-project-diagram"></i><span>Statistical Software</span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Become a Tutor</h3>
+         <p class="tutor">Join us and share your expertise in statistics. Inspire students and help them master the world of data analysis!</p>
+         <a href="teachers.html" class="inline-btn">Get Started</a>
+      </div>
+   </div>
+</section>
+
+<section class="courses">
+   <h1 class="heading">Our Courses</h1>
+
+   <div class="box-container">
+      <div class="box">
+         <div class="tutor">
+            <img src="Faustin.jpg" alt="">
+            <div class="info">
+               <h3>FAUSTIN</h3>
+               <span>01-02-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="Statistical.png" alt="">
+            <span>12 videos</span>
+         </div>
+         <h3 class="title">Statistical Concepts Overview</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="Faustin.jpg" alt="">
+            <div class="info">
+               <h3>FAUSTIN</h3>
+               <span>05-02-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="Data.png" alt="">
+            <span>8 videos</span>
+         </div>
+         <h3 class="title">Data Analysis with Software</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="Faustin.jpg" alt="">
+            <div class="info">
+               <h3>FAUSTIN</h3>
+               <span>10-02-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="Representation.png" alt="">
+            <span>6 videos</span>
+         </div>
+         <h3 class="title">Graphical Representation of Data</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+   </div>
+
+   <div class="more-btn">
+      <a href="courses.html" class="inline-option-btn">View All Courses</a>
+   </div>
+</section>
+
+<footer class="footer">
+   &copy; Copyright 2024 by <span>Give and Get</span> | All Rights Reserved!
+</footer>
+
+<!-- Custom JS File Link -->
+<script src="js/script.js"></script>
+   
+</body>
+</html>
